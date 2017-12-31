@@ -8,13 +8,13 @@ class IndexController extends Action
 {
     public function index()
     {
-        $this->view->cars = ["Mustang", "Ferrari"];
+        @$this->view->cars = ["Mustang", "Ferrari"];
         $this->render("index");
     }
 
     public function contact()
     {
-        $this->view->cars = ["Mustang", "Ferrari"];
-        $this->render("contact");
+        @$this->view->cars = ["Mustang", "Ferrari"];
+        $this->render("contact",false);
     }
 }
