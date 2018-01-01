@@ -4,12 +4,12 @@ namespace SON\Controller;
 
 abstract class Action
 {
-    protected $view;
+    protected $views;
     private $action;
     
     public function __contruct()
     {
-        $this->view = new \stdClass();
+        $this->views = new \stdClass();
     }
 
     protected function render($action, $layout = true)
