@@ -2,18 +2,10 @@
 
 namespace App\Models;
 
-class Client
+use SON\Model\Table;
+
+class Client extends Table
 {
-    protected $db;
+    protected $table = "clients";
 
-    public function __construct(\PDO $db)
-    {
-        $this->db = $db;
-    }
-
-    public function fetchAll()
-    {
-        $query = "select * from clients";
-        return $this->db->query($query);
-    }
 }
